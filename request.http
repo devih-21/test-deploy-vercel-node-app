@@ -1,0 +1,100 @@
+### GET USER WITH auth
+GET http://localhost:3001/auth
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2ODA2MTQ3NTR9.PtyF7Qz_48AI0FD7JvKPKUImj-eBZpaxqJTTC0HKGG8
+
+###  LOGIN
+
+POST http://localhost:3001/login
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "admin"
+}
+
+
+
+### GET User
+GET http://localhost:3001/order/getOrderQuality
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2ODMxMjc2MzZ9.kFE4pzQKFl1qYJcoKk6OhyFvzFNRZ-PzfHowIO2IEiU
+
+
+
+### GET ALL PRODUCT
+GET http://localhost:3001/product/getAllProduct
+
+
+### GET ALL PRODUCT BY getProductByCategory
+GET http://localhost:3001/product/getProductByCategory/t-shirt
+
+
+
+
+### GET ONE PRODUCT WITH IMAGES
+GET http://localhost:3001/product/getOneProduct/f5f2f6a3-f44f-4234-a8c9-a94caa34b933
+
+
+### POST PRODUCT
+POST http://localhost:3001/product/create
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2ODA3OTc0NTR9.Hrv_35vK0m2KdRCV8Z0IhqmkUTwDyfwmHLPHpsqZuho
+
+
+{
+    "title": "BASIC NAVY BLACK Z2",
+    "description": "Áo Phông Basic Navy là một item kinh điển chưa từng thiếu vắng trong tủ đồ của cánh mày râu. Chỉ với vài cách mix Áo Phông Basic đơn giản các chàng trai đã có một vẻ ngoài ấn tượng và những bức ảnh check in để đời. Dù bạn là anh chàng theo phong cách tối giản Minimalism. Hay đỏm dáng thì tủ đồ nhất định phải có một chiếc áo thun nam. Bởi đó là một classic item bất hủ diện được hầu hết hoàn cảnh. Từ đi chơi, đi gặp đối tác tới đi ra mắt nhà bạn gái.",
+    "price": 200000,
+    "category": "t-shirt",
+    "path": "navi-bz3",
+    "images": ["BSX1067D.jpg", "link 2"],
+    "color": ["black", "white"],
+    "size": ["XL", "L"],
+    "quality": 20
+
+}
+
+
+### PUT PRODUCT
+PUT http://localhost:3001/product/update/76e28e6f-5c64-426f-b99e-133b8d30a53a
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2ODA3OTc0NTR9.Hrv_35vK0m2KdRCV8Z0IhqmkUTwDyfwmHLPHpsqZuho
+
+{
+    "title": "NEW BASIC NAVY",
+    "description": "Áo Phông Basic Navy là một item kinh điển chưa từng thiếu vắng trong tủ đồ của cánh mày râu. Chỉ với vài cách mix Áo Phông Basic đơn giản các chàng trai đã có một vẻ ngoài ấn tượng và những bức ảnh check in để đời. Dù bạn là anh chàng theo phong cách tối giản Minimalism. Hay đỏm dáng thì tủ đồ nhất định phải có một chiếc áo thun nam. Bởi đó là một classic item bất hủ diện được hầu hết hoàn cảnh. Từ đi chơi, đi gặp đối tác tới đi ra mắt nhà bạn gái.",
+    "price": 200000,
+    "category": "t-shirt",
+    "path": "navi-1055sd-3",
+    "images": ["BSX1067.jpg", "link_test"],
+    "variants" : [{"color": "blue", "size": "L", "quality": 20}, {"color": "black", "size": "XL", "quality": 20}, {"color": "red", "size": "M", "quality": 20},{"color": "red", "size": "L", "quality": 20}]
+}
+
+
+### DELETE PRODUCT
+DELETE http://localhost:3001/product/delete/76e28e6f-5c64-426f-b99e-133b8d30a53a
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2ODA4NjA3MjR9.glP6UT5bEyXTussBpndDbZVdzJqNpv3H3B3OzZ7Q0Bo
+
+
+### GET ALL Variant
+GET http://localhost:3001/variant/getAllVariant
+
+### GET ONE Variant with id
+GET http://localhost:3001/variant/getOneVariant/f5f2f6a3-f44f-4234-a8c9-a94caa34b933
+
+
+
+
+### GET ORDER
+GET http://localhost:3001/order/getAllOrder
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2ODA4NjA3MjR9.glP6UT5bEyXTussBpndDbZVdzJqNpv3H3B3OzZ7Q0Bo
+
+
+
+### GET ORDER BY ID
+GET http://localhost:3001/order/getOrderById/65afe486-d6b8-49c9-a4d0-cf83e0760090
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2ODA4NjA3MjR9.glP6UT5bEyXTussBpndDbZVdzJqNpv3H3B3OzZ7Q0Bo
+
+### GET CART
+GET http://localhost:3001/cart/getCart
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsInVzZXJuYW1lIjoiYWRtaW4iLCJpYXQiOjE2ODA2MTQ3NTR9.PtyF7Qz_48AI0FD7JvKPKUImj-eBZpaxqJTTC0HKGG8
